@@ -51,7 +51,7 @@ const Item = ( {item, manufacturers} ) => {
     const toggleShowAvailibility = () => {
     
         if(showAvailibility === true) {
-            return <td style={paddingLeft} > {availability} </td>
+            return <td  > {availability} </td>
         } 
             return <td> </td>
 

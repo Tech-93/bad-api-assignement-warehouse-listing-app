@@ -5,6 +5,7 @@ import clothesService from './services/clothes'
 import ProductList from './Components/ListRenderer'
 import SortedLists from './Components/ListSorter'
 import SearchForItem from './Components/Search'
+import Links from './Components/Links'
 import {
   BrowserRouter as Router,
   Switch, Route, Link
@@ -141,6 +142,9 @@ const App = () => {
               <Nav.Link href="#" as="span">
                 <button > <Link to="/itemsearch"> SEARCH </Link> </button>
               </Nav.Link>
+              <Nav.Link href="#" as="span">
+                <Link to="/links"> Links </Link> 
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -163,9 +167,13 @@ const App = () => {
               
           </Route>
   
-         <Route path="/itemsearch" >
+          <Route path="/itemsearch" >
            <SearchForItem items={items} manufacturers={manufacturers} counter={counter} setCounter={setCounter}  />
-         </Route> 
+          </Route> 
+
+          <Route path="/links">
+            <Links />
+          </Route>
           
           <Route path="/" > 
             <ProductList list={shirts} type="Shirts" manufacturers={manufacturers} 
